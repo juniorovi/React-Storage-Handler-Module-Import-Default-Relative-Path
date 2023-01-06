@@ -3,7 +3,7 @@ import './Cosmetic.css'
 const Cosmetic = (porps) => {
     const { name, price, id } = porps.cosmetic;
     const addToCart = (id) => {
-        console.log('Item Added', id)
+        localStorage.setItem(id, 1)
     }
     // const addToCartWithParameter =()=> addToCart(id);
     return (
@@ -13,7 +13,7 @@ const Cosmetic = (porps) => {
             <p>Only for: ${price}</p>
             <p><small>It has an ID: {id}</small></p>
             {/* <button onClick={addToCartWithParameter}>Add to Cart</button> */}
-            <button onClick={()=> addToCart(id)}>Add to Cart</button>
+            <button onClick={() => addToCart(id)}>Add to cart Shortcut</button>
         </div>
     );
 };
