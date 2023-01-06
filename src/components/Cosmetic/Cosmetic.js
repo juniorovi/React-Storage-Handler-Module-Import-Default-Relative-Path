@@ -5,14 +5,15 @@ const Cosmetic = (porps) => {
     const addToCart = (id) => {
         console.log('Item Added', id)
     }
-    const addToCartWithParameter =()=> addToCart(id);
+    // const addToCartWithParameter =()=> addToCart(id);
     return (
         <div className='product'>
             {/* <h2>Buy this: {porps.cosmetic.name}</h2> */}
             <h2>Buy this: {name}</h2>
             <p>Only for: ${price}</p>
             <p><small>It has an ID: {id}</small></p>
-            <button onClick={addToCartWithParameter}>Add to Cart</button>
+            {/* <button onClick={addToCartWithParameter}>Add to Cart</button> */}
+            <button onClick={()=> addToCart(id)}>Add to Cart</button>
         </div>
     );
 };
