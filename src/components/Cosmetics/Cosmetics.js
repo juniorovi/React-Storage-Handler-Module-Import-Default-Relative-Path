@@ -1,16 +1,19 @@
 import React from 'react';
-import {add, multiply } from '../../Utilities/Calculate';
+import Cosmetic from '../Cosmetic/Cosmetic';
 
 const Cosmetics = () => {
-    const first = 54;
-    const second = 7;
-    const total = add(first, second);
-    const minimumCost = multiply(first, second)
+    const cosmetics = [
+        { id: 1, name: 'Alta', price: 100 },
+        { id: 2, name: 'Sonu', price: 200 },
+        { id: 3, name: 'Pawder', price: 300 }
+    ]
+
     return (
         <div>
-            <h1>Welcome to our cosmetics store</h1>
-            <h4>Price with vat: {total}</h4>
-            <h5>You will get 1% off for Minimum Spend: {minimumCost}</h5>
+            {cosmetics.map(cosmetic => <Cosmetic
+                key={cosmetic.id}
+                cosmetic={cosmetic}
+            ></Cosmetic>)}
         </div>
     );
 };
