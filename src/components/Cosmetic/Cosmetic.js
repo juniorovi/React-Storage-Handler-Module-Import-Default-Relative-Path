@@ -4,9 +4,10 @@ import './Cosmetic.css'
 const Cosmetic = (porps) => {
     const { name, price, id } = porps.cosmetic;
 
-    /*     const addToCart = (id) => {
-            localStorage.setItem(id, 1)
-        } */
+    const addToCart = (id) => {
+        // localStorage.setItem(id, 1)
+        addToDb(id)
+    }
 
     // const addToCartWithParameter =()=> addToCart(id);
 
@@ -17,7 +18,7 @@ const Cosmetic = (porps) => {
             <p>Only for: ${price}</p>
             <p><small>It has an ID: {id}</small></p>
             {/* <button onClick={addToCartWithParameter}>Add to Cart</button> */}
-            <button onClick={() => addToDb(id)}>Add to cart Shortcut</button>
+            <button onClick={() => addToCart(id)}>Add to cart Shortcut</button>
         </div>
     );
 };
