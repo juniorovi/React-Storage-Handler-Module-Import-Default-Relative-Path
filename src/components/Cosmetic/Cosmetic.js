@@ -11,7 +11,7 @@ const Cosmetic = (porps) => {
             <h2>Buy this: {name}</h2>
             <p>Only for: ${price}</p>
             <p><small>It has an ID: {id}</small></p>
-            <button onClick={addToCart(id)}>Add to Cart</button>
+            <button onClick={addToCart}>Add to Cart</button>
         </div>
     );
 };
