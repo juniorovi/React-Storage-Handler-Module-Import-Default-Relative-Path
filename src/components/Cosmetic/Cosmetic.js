@@ -1,12 +1,14 @@
 import React from 'react';
 import { addToDb } from '../../Utilities/fakedb';
+import { addToLocalDb } from '../../Utilities/localDb';
 import './Cosmetic.css'
 const Cosmetic = (porps) => {
     const { name, price, id } = porps.cosmetic;
 
     const addToCart = (id) => {
         // localStorage.setItem(id, 1)
-        addToDb(id)
+        // addToDb(id)
+        addToLocalDb(id)
     }
 
     // const addToCartWithParameter =()=> addToCart(id);
